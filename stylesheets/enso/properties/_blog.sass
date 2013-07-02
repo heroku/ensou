@@ -1,0 +1,154 @@
+.fuji
+
+  border-top: 6px solid $main-color
+
+  .fuji-container
+    padding-left: 0
+    padding-right: 0
+    +tablet
+      max-width: $content-max-width
+      padding-left: 15px
+      padding-right: 15px
+
+body > .content
+  margin: 0 auto
+  max-width: $tablet-threshold
+
+  +tablet
+    max-width: $content-max-width
+    position: relative
+    margin-left: auto
+    margin-right: auto
+
+article
+  +no-float
+  position: relative
+  margin: 40px 0 100px 0
+  padding: 0
+  +tablet
+    margin: 10px 0
+    padding: 15px
+
+  hgroup
+    position: absolute
+    top: 0
+    left: 0
+    max-width: $post-title-max-width
+    margin: 5px 0 20px 0
+    +tablet
+      position: relative
+      max-width: 100%
+      margin: 5px 0 10px 0
+
+    h1
+      margin: 0
+      padding: 0
+      font-size: 32px
+      line-height: 38px
+      font-weight: normal
+      color: $main-color
+      a
+        color: $main-color
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
+    .byline
+      +desktop-typography
+      font-weight: normal
+      color: $faint-text-color
+      margin: 0
+      padding: 10px 0 0 0
+      a
+        color: $faint-text-color
+        text-decoration: underline
+        &.comments
+          font-size: .9em
+          color: rgba($faint-text-color, 0.8)
+          text-decoration: none
+        &:hover
+          color: $link-color
+          text-decoration: underline
+
+  .post_body
+    +float-right
+    width: 100%
+    max-width: $content-max-width
+
+    a
+      color: $link-color
+      padding: 0 2px
+      margin: 0 -2px
+      display: inline-block
+      &:hover, &.active
+        background-color: $link-color
+        color: $background-color
+        text-decoration: none
+        +border-radius(2px)
+
+    img
+      max-width: 100%
+      &.stretchy
+        width: 100%
+
+    .meta, a.read-more
+      margin-top: 20px
+
+ol.addon_matrix
+  +no-float
+  list-style: none
+  margin: 10px 0
+  padding: 0
+  > li
+    +float-left
+    margin: 10px
+    padding: 0
+    a
+      display: block
+      height: 140px
+      width: 140px
+      padding: 15px 0 0 0
+      text-align: center
+      background-repeat: no-repeat
+      background-position: center 15px
+      text-decoration: none
+      transition: all 0.3s
+      +tablet
+        width: 180px
+      span
+        display: block
+        margin: 10px 0 0 0
+        text-align: center
+
+      &:hover
+        +border-radius(6px)
+        background-color: $faint-background-color
+        color: $text-color
+        text-decoration: none
+
+
+.pagination
+  text-align: center
+  position: relative
+  margin: 20px auto
+  +tablet
+    padding-left: 0
+    line-height: 40px
+
+  a, em
+    padding: 4px 8px
+    text-decoration: none
+    font-style: normal
+    &:hover
+      text-decoration: underline
+
+  span.disabled
+    color: $faint-text-color
+
+#footer
+  margin-top: 160px
+  padding: 30px 15px
+  background-color: $faint-background-color
+  color: $faint-text-color
+  line-height: 20px
+  text-align: center

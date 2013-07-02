@@ -4,11 +4,13 @@
   margin: 0
   padding: 0
   color: $text-color
+  background: $background-color
+
   +tablet
     +mobile-typography
 
   *
-    +box-sizing(border-box)
+    +border-box
 
   +tablet
     img, figure
@@ -99,10 +101,10 @@
   .hidden
     display: none
   .weak, .faint
-    +transition(all 0.3s)
-    +opacity(0.5)
+    transition: all 0.3s
+    opacity: 0.5
     &:hover
-      +opacity(1)
+      opacity: 1
 
   iframe
     margin: 20px 0
@@ -115,7 +117,7 @@
       .label-and-hint
         display: block
         .hint
-          +opacity(0.5)
+          opacity: 0.5
           padding: 0 5px
 
       input, textarea

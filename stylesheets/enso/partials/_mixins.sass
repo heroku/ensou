@@ -1,3 +1,13 @@
+@mixin border-radius($r:3px)
+  -webkit-border-radius: $r
+  -moz-border-radius: $r
+  border-radius: $r
+
+@mixin border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
 @mixin no-float
   display: block
   float: none
@@ -33,3 +43,38 @@
   -o-font-feature-settings: "liga","dlig"
   font-feature-settings: "liga","dlig"
   text-rendering: optimizeLegibility
+
+@mixin placeholder
+  &.placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-webkit-input-placeholder
+    @content
+
+@mixin centered_left($margin:0px)
+  position: absolute
+  top: 50%
+  left: $margin
+  -webkit-transform: translate(0, -50%)
+  transform: translate(0, -50%)
+
+@mixin arrow-up($size: 10px, $color: black)
+  display: block
+  width: 0
+  height: 0
+  border-left: $size solid transparent
+  border-right: $size solid transparent
+  border-bottom: $size solid $color
+
+@mixin horizontal-line($position, $depth: 30%, $color: white, $background-color: transparent)
+  background-image: linear-gradient(to right, $background-color, $color $depth, $color (100-$depth), $background-color)
+  background-position: $position center
+  background-repeat: no-repeat
+  background-size: 100% 1px
+
+@mixin vertical-line($position, $depth: 30%, $color: white, $background-color: transparent)
+  background-image: linear-gradient(to bottom, $background-color, $color $depth, $color (100-$depth), $background-color)
+  background-position: center $position
+  background-repeat: no-repeat
+  background-size: 1px 100%

@@ -1,29 +1,35 @@
-![enso](https://s3.amazonaws.com/f.cl.ly/items/0v2q3T1G0C381W3C2R1Z/Screen%20Shot%202013-07-01%20at%202.34.20%20PM.png)
+![enso](https://s3.amazonaws.com/f.cl.ly/items/1O3N0i2E3c2S3z3r183V/enso-purple-01.svg)
 
 Enso
 ====
 
-Sass Styles for (Ruby) Heroku apps.
+Enso provides a set of Sass Styles for use in Heroku apps. It is designed to be as non-magical as possible, and has no dependency on Compass or any other framework. Enso makes its stylesheets available to your application by [adding itself](https://github.com/heroku/enso/blob/master/lib/enso.rb) to the [Sass.load_paths](http://sass-lang.com/docs/yardoc/Sass.html#load_paths-class_method).
 
 ## Usage
 
-Add enso to your Gemfile:
+Enso is avialable as a [rubygem](http://rubygems.org/gems/enso), so using it in a ruby app is trivial:
 
 ```ruby
 gem "enso"
 ```
 
-And import one of the themes into your app's sass stylesheet:
+Import one of enso's themed stylesheets into your app's sass/scss stylesheet:
 
 ```sass
 @import "enso/day"
 @import "enso/night"
 ```
 
-## How It Works
+## Development
 
-There's no magic going on here, and no dependency on Compass. Enso adds its Sass stylesheets to your application's [Sass.load_paths](http://sass-lang.com/docs/yardoc/Sass.html#load_paths-class_method), like so:
+```bash
+# Symlink your checked-out copy of the enso repo:
+ln -s ~/my/checked-out/enso/ ~/.heroku/enso
 
-```ruby
-Sass.load_paths << File.dirname(__FILE__ )+ '/stylesheets'
+# In your app, point to your local copy of the enso gem:
+gem "enso", path: "~/.heroku/enso"
 ```
+
+## License
+
+MIT

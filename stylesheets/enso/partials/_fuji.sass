@@ -1,0 +1,120 @@
+// Configurable Config
+
+$fuji-foreground-color: #8B8BB2 !default
+$fuji-background-color: transparent !default
+
+$fuji-max-width: 1032px !default
+$fuji-horizontal-padding: 12px !default
+$fuji-vertical-padding: 2em !default
+
+$fuji-logo-text-color: $fuji-foreground-color !default
+$fuji-logo-subtext-color: rgba($fuji-foreground-color, 0.6) !default
+
+$fuji-link-color-inactive: #7C76B8 !default
+$fuji-link-color-active: #1B1B24 !default
+
+$fuji-link-background-color-inactive: transparent !default
+$fuji-link-background-color-active: $fuji-link-color-inactive !default
+
+$fuji-base-font-size: inherit !default
+$fuji-logo-font-size: 22px !default
+
+$fuji-border-radius: 3px !default
+
+// Immutable Config
+
+$fuji-line-edge-color: transparent
+$fuji-line-middle-color: rgba($fuji-foreground-color, 0.2)
+$fuji-line-size: 40%
+
+=brand-font-stack
+  font-family: "hybrea", "proxima nova", "helvetica neue", helvetica, arial, geneva, sans-serif
+
+.fuji
+
+  background-color: $fuji-background-color
+  font-size: $fuji-base-font-size
+  line-height: 1
+
+  .fuji-container
+    +no-float
+    margin: 0 auto
+    max-width: $fuji-max-width
+    min-width: 320px
+    padding: $fuji-vertical-padding $fuji-horizontal-padding
+
+  .fuji-brand
+    float: left
+    margin: 0
+
+  .fuji-logo
+    max-width: 300px
+    +brand-font-stack
+    color: $fuji-logo-text-color !important
+    font:
+      size: $fuji-logo-font-size
+      weight: normal
+    line-height: 1.5em
+    text-decoration: none
+
+  .fuji-logo-subtext
+    display: inline-block
+    color: $fuji-logo-subtext-color
+
+  .fuji-links
+    float: right
+    margin-top: 0px
+    max-width: 700px
+    list-style: none
+
+    > li
+      float: left
+      padding: 0
+      margin: 0 6px
+      +vertical-line(left, 30%, $fuji-link-color-inactive, $fuji-background-color)
+
+      background:
+        position: left center
+        repeat: no-repeat
+        size: 1px 100%
+
+      @media (max-width: $fuji-max-width)
+        display: none
+        background: none
+
+        &:last-child
+          display: block
+
+      a
+        display: block
+        padding: 0.43em 0.57em 0.36em
+
+        +border-radius($fuji-border-radius)
+        color: $fuji-link-color-inactive
+        background-color: $fuji-link-background-color-inactive
+        text-decoration: none
+
+        &:hover,
+        &:active,
+        &.active,
+        &.login,
+        &.account
+          background-color: $fuji-link-background-color-active
+          color: $fuji-link-color-active
+
+        &.gravatar
+          padding: 0 0 0 1.14em
+
+          img
+            display: block
+            height: 32px
+            width: 32px
+
+            +border-radius(1000px)
+
+      &:first-child
+        margin-left: 0
+        background-image: none
+
+      &:last-child
+        margin-right: 0
