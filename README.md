@@ -7,7 +7,8 @@ Enso provides a set of Sass Styles for use in Heroku apps. It is designed to be 
 
 ## Usage
 
-Enso is avialable as a [rubygem](http://rubygems.org/gems/enso), so using it in a ruby app is trivial:
+Enso is avialable as a [rubygem](http://rubygems.org/gems/enso), so using it in a ruby app is trivial.
+Put this in your Gemfile and bundle:
 
 ```ruby
 gem "enso"
@@ -18,6 +19,12 @@ Import one of enso's themed stylesheets into your app's sass/scss stylesheet:
 ```sass
 @import "enso/day"
 @import "enso/night"
+```
+
+Add a class of `enso` to your layout body, as all of enso's styles are namespaced under it:
+
+```html
+<body class="enso"></body>
 ```
 
 ## Development
