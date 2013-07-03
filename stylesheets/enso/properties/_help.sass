@@ -1,0 +1,30 @@
+$search_input_width: 600px
+
+.content
+  +flexible-centered-container(800px)
+  margin-top: 50px
+
+form.search
+  +no-float
+  min-width: 480px
+  #search_text_field
+    +float-left
+    +border-radius(3px)
+    +base-font-stack
+    // +desktop-typography
+    font-size: 22px
+    padding: 6px
+    width: $search-input-width
+    +placeholder
+      color: rgba($background-color, 0.4)
+  input.button
+    +float-right
+    +button
+
+.status-bar
+  display: none
+
+h2
+  font-weight: normal
+
+ul.search-results

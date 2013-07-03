@@ -1,3 +1,11 @@
+
+@mixin flexible-centered-container($width)
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  min-width: 320px
+  max-width: $width
+
 @mixin border-radius($r:3px)
   -webkit-border-radius: $r
   -moz-border-radius: $r
@@ -7,6 +15,17 @@
   -moz-box-sizing: border-box
   -webkit-box-sizing: border-box
   box-sizing: border-box
+
+@mixin button
+  +base-font-stack
+  +desktop-typography
+  +border-radius(4px)
+  color: $main-color
+  background-color: $link-color
+  padding: 0 15px
+  line-height: 2.4
+  cursor: pointer
+  border: none
 
 @mixin no-float
   display: block
@@ -20,14 +39,6 @@
 @mixin float-right
   display: block
   float: right
-
-@mixin tablet
-  @media (max-width: $tablet-threshold)
-    @content
-
-@mixin mobile
-  @media (max-width: $mobile-threshold)
-    @content
 
 @mixin iconic($size:32px)
   font:

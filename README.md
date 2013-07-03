@@ -11,7 +11,7 @@ Enso is avialable as a [rubygem](http://rubygems.org/gems/enso), so using it in 
 Put this in your Gemfile and bundle:
 
 ```ruby
-gem "enso"
+gem "enso", "~> 0.0.1"
 ```
 
 Import one of enso's themed stylesheets into your app's sass/scss stylesheet:
@@ -29,13 +29,23 @@ Add a class of `enso` to your layout body, as all of enso's styles are namespace
 
 ## Development
 
+Follow these steps to make developing against the gem painless:
+
 ```bash
 # Symlink your checked-out copy of the enso repo:
 ln -s ~/my/checked-out/enso/ ~/.heroku/enso
 
 # In your app, point to your local copy of the enso gem:
 gem "enso", path: "~/.heroku/enso"
+
+# To make enso's stylesheets feel like they're in your app:
+ln -s ~/.heroku/enso app/assets/stylesheets
 ```
+
+## Cutting a Release
+
+1. Bump the version in `enso.gemspec`
+1. `rake release`
 
 ## License
 

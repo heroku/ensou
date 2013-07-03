@@ -1,4 +1,6 @@
-.enso // preferably applied to "body" element
+// The "enso" class should be applied to the layout's "body" element
+
+.enso
   +base-font-stack
   +desktop-typography
   margin: 0
@@ -6,21 +8,11 @@
   color: $text-color
   background: $background-color
 
-  +tablet
+  +tablet-landscape-and-below
     +mobile-typography
 
   *
     +border-box
-
-  +tablet
-    img, figure
-      width: auto !important
-      max-width: 100% !important
-
-  +mobile
-    img, figure
-      width: auto !important
-      max-width: 100% !important
 
   h2
     color: $main-color
@@ -90,7 +82,7 @@
     padding: 10px
     margin: 10px 0
     overflow-x: scroll
-    +mobile
+    +mobile-landscape-and-below
       max-width: 100%
 
   a
@@ -141,7 +133,7 @@
   dd
     padding: 5px 0
     margin: 0
-    +tablet
+    +tablet-landscape-and-below
       padding: 5px 15px
 
   table
