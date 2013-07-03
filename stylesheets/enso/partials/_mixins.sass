@@ -40,6 +40,17 @@
   display: block
   float: right
 
+@mixin reset-list
+  margin: 0
+  padding: 0
+  list-style: none
+  > li
+    margin: 0
+    padding: 0
+
+@mixin faint
+  opacity: 0.5
+
 @mixin iconic($size:32px)
   font:
     family: heroku

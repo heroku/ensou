@@ -27,4 +27,25 @@ form.search
 h2
   font-weight: normal
 
-ul.search-results
+ul.conversation
+  +reset-list
+  > li
+    padding: 25px 0
+    +no-float
+    +horizontal-line(bottom, 5%, rgba($text-color, 0.2), transparent)
+    &:last-child
+      background: none
+    aside
+      +float-left
+      width: 25%
+      img.avatar
+        +border-radius(4px)
+      p
+        padding: 0
+        &.name
+          color: $foreground-color
+        &.metadata
+          +faint
+    article
+      +float-right
+      width: 75%

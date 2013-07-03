@@ -1,6 +1,6 @@
 // The "enso" class should be applied to the layout's "body" element
 
-.enso
+body
   +base-font-stack
   +desktop-typography
   margin: 0
@@ -11,160 +11,166 @@
   +tablet-landscape-and-below
     +mobile-typography
 
-  *
-    +border-box
+*
+  +border-box
 
-  h2
-    color: $main-color
-    font-size: 22px
-    line-height: 28px
-    margin: 0
-    padding: 30px 0 5px 0
+h2
+  color: $main-color
+  font-size: 22px
+  line-height: 28px
+  margin: 0
+  padding: 30px 0 5px 0
 
-  h3
-    color: rgba($main-color, 0.85)
-    font-size: 17px
-    line-height: 24px
-    margin: 0
-    padding: 20px 0 0 0
+h3
+  color: rgba($main-color, 0.85)
+  font-size: 17px
+  line-height: 24px
+  margin: 0
+  padding: 20px 0 0 0
 
-  h4
-    color: rgba($main-color, 0.7)
-    font-size: 18px
-    line-height: 24px
-    margin: 0
-    padding: 20px 0 0 0
+h4
+  color: rgba($main-color, 0.7)
+  font-size: 18px
+  line-height: 24px
+  margin: 0
+  padding: 20px 0 0 0
 
-  p
-    margin: 0
-    padding: 5px 0
-    code
-      +code-font-stack
-      font-size: 13px
-      padding: 2px 3px
-      background: $faint-background-color
-    a
-      code
-        background: none
-        font-size: 14px
-        padding: 0
-    &.notice
-      background-color: $notice-background-color
-      border: 1px solid $notice-border-color
-      color: $notice-text-color
-      padding: 10px
-      margin: 10px 0
-      font-size: 14px
-
-  hr
-    border: 0
-    height: 2px
-    background-color: $faint-border-color
-
-  ol, ul
-    list-style-position: outside
-    margin: 5px 0 5px 20px
-    padding: 0
-    li
-      margin: 8px 0 8px 16px
-
-  ul
-    margin-left: 10px
-
-  pre
+p
+  margin: 0
+  padding: 5px 0
+  code
     +code-font-stack
-    +border-radius(3px)
-    font-size: 14px
-    line-height: 20px
-    background-color: $faint-background-color
-    border: 1px solid $faint-border-color
-    color: $code-text-color
+    font-size: 13px
+    padding: 2px 3px
+    background: $faint-background-color
+  a
+    code
+      background: none
+      font-size: 14px
+      padding: 0
+  &.notice
+    background-color: $notice-background-color
+    border: 1px solid $notice-border-color
+    color: $notice-text-color
     padding: 10px
     margin: 10px 0
-    overflow-x: scroll
-    +mobile-landscape-and-below
-      max-width: 100%
+    font-size: 14px
 
-  a
-    color: $link-color
-    &.iconic
-      +iconic(20px)
+hr
+  border: 0
+  height: 2px
+  background-color: $faint-border-color
 
-  .hidden
-    display: none
-  .weak, .faint
-    transition: all 0.3s
-    opacity: 0.5
-    &:hover
-      opacity: 1
+ol, ul
+  list-style-position: outside
+  margin: 5px 0 5px 20px
+  padding: 0
+  li
+    margin: 8px 0 8px 16px
 
-  iframe
-    margin: 20px 0
+ul
+  margin-left: 10px
+
+pre
+  +code-font-stack
+  +border-radius(3px)
+  font-size: 14px
+  line-height: 20px
+  background-color: $faint-background-color
+  border: 1px solid $faint-border-color
+  color: $code-text-color
+  padding: 10px
+  margin: 10px 0
+  overflow-x: scroll
+  +mobile-landscape-and-below
     max-width: 100%
 
-  form.standard
-    max-width: $content-max-width
-    .input
-      margin: 20px 0
-      .label-and-hint
-        display: block
-        .hint
-          opacity: 0.5
-          padding: 0 5px
+a
+  color: $link-color
+  &.iconic
+    +iconic(20px)
 
-      input, textarea
-        width: 100%
-        +base-font-stack
-        +desktop-typography
+iframe
+  margin: 20px 0
+  max-width: 100%
 
-  .call-to-action
-    background-color: $call-to-action-background-color
-    border: 1px solid $call-to-action-border-color
-    color: $call-to-action-text-color
-    padding: 10px
-    margin: 10px 0
-    +border-radius(3px)
+form.standard
+  max-width: $content-max-width
+  .input
+    margin: 20px 0
+    .label-and-hint
+      display: block
+      .hint
+        opacity: 0.5
+        padding: 0 5px
 
-  blockquote
-    border-left: 5px solid $faint-border-color
-    margin: 15px 0
-    padding: 0px 15px
+    input, textarea
+      width: 100%
+      +base-font-stack
+      +desktop-typography
 
-  dd
-    padding: 5px 0
-    margin: 0
-    +tablet-landscape-and-below
-      padding: 5px 15px
+blockquote
+  border-left: 5px solid $faint-border-color
+  margin: 15px 0
+  padding: 0px 15px
 
-  table
-    font-size: 15px
-    width: 100%
-    border-collapse: collapse
-    tr
-      &:hover
-        background-color: $faint-background-color
-    th
-      text-align: left
-      padding: 2px 5px
-    td
-      padding: 5px 5px
-      a
-        text-decoration: none
-        &.iconic
-          line-height: 22px
+dd
+  padding: 5px 0
+  margin: 0
+  +tablet-landscape-and-below
+    padding: 5px 15px
 
-  ol.horizontal
-    list-style: none
-    margin: 0
-    padding: 0
-    > li
-      display: inline-block
-      border-right: 1px solid $faint-border-color
-      padding: 5px 10px
-      margin: 0
-      &:first-child
-        border-left: none
-        padding-left: 0
-      &:last-child
-        border-right: none
-        padding-right: 0
+table
+  font-size: 15px
+  width: 100%
+  border-collapse: collapse
+  tr
+    &:hover
+      background-color: $faint-background-color
+  th
+    text-align: left
+    padding: 2px 5px
+  td
+    padding: 5px 5px
+    a
+      text-decoration: none
+      &.iconic
+        line-height: 22px
+
+.call-to-action
+  background-color: $call-to-action-background-color
+  border: 1px solid $call-to-action-border-color
+  color: $call-to-action-text-color
+  padding: 10px
+  margin: 10px 0
+  +border-radius(3px)
+
+.hidden
+  display: none
+.weak, .faint
+  transition: all 0.3s
+  +faint
+  &:hover
+    opacity: 1
+
+ol.horizontal, ul.horizontal
+  +reset-list
+  > li
+    display: inline-block
+    +vertical-line(left, 30%, rgba($text-color, 0.2), transparent)
+    padding: 2px 10px
+    &:first-child
+      background: none
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+
+ol.pipeless, ul.pipeless
+  > li
+    border: none
+
+ol.ruled, ul.ruled
+  +reset-list
+  > li
+    padding: 10px 0
+    +horizontal-line(bottom, 5%, rgba($text-color, 0.2), transparent)
