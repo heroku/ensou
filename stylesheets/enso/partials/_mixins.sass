@@ -16,16 +16,24 @@
   -webkit-box-sizing: border-box
   box-sizing: border-box
 
-@mixin button
+@mixin button($font-size: 16px, $vertical-padding: 6px)
   +base-font-stack
   +desktop-typography
   +border-radius(4px)
-  color: $main-color
-  background-color: $link-color
-  padding: 0 15px
-  line-height: 2.4
+  color: $heading-color
+  background-color: $button-background-color
+  padding: $vertical-padding 15px
+  font-size: $font-size
+  line-height: 1
   cursor: pointer
   border: none
+  -webkit-appearance: none
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+@mixin button-large
+  +button(22px, 10px)
 
 @mixin no-float
   display: block

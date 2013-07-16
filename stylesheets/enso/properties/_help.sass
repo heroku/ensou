@@ -1,25 +1,30 @@
-$search_input_width: 600px
-
-.content
-  +flexible-centered-container(800px)
-  margin-top: 50px
+$search-button-width: 100px
+$search-button-margin-left: 20px
 
 form.search
   +no-float
-  min-width: 480px
+  position: relative
+  padding-right: $search-button-width + $search-button-margin-left
   #search_text_field
     +float-left
     +border-radius(3px)
     +base-font-stack
-    // +desktop-typography
     font-size: 22px
     padding: 6px
-    width: $search-input-width
+    width: 100%
     +placeholder
-      color: rgba($background-color, 0.4)
+      color: rgba($background-color, 0.6)
   input.button
-    +float-right
-    +button
+    +button-large
+    position: absolute
+    right: 0
+    width: $search-button-width
+
+  +tablet-landscape-and-below
+    padding-right: 0
+    input.button
+      width: 100%
+      position: relative
 
 .status-bar
   display: none

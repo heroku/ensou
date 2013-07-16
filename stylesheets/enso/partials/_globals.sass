@@ -1,4 +1,8 @@
-// The "enso" class should be applied to the layout's "body" element
+// Vanilla, unscoped styles
+// ----------------------------------------------------------------------
+
+*
+  +border-box
 
 body
   +base-font-stack
@@ -11,25 +15,22 @@ body
   +tablet-landscape-and-below
     +mobile-typography
 
-*
-  +border-box
-
 h2
-  color: $main-color
+  color: $heading-color
   font-size: 22px
   line-height: 28px
   margin: 0
-  padding: 30px 0 5px 0
+  padding: 30px 0 15px 0
 
 h3
-  color: rgba($main-color, 0.85)
+  color: rgba($heading-color, 0.85)
   font-size: 17px
   line-height: 24px
   margin: 0
   padding: 20px 0 0 0
 
 h4
-  color: rgba($main-color, 0.7)
+  color: rgba($heading-color, 0.7)
   font-size: 18px
   line-height: 24px
   margin: 0
@@ -48,28 +49,25 @@ p
       background: none
       font-size: 14px
       padding: 0
-  &.notice
-    background-color: $notice-background-color
-    border: 1px solid $notice-border-color
-    color: $notice-text-color
-    padding: 10px
-    margin: 10px 0
-    font-size: 14px
+
+a
+  color: $link-color
+  text-decoration: none
+  &.iconic
+    +iconic(20px)
+  &.weak
+    text-decoration: none
+  &:hover
+    text-decoration: underline
+
+iframe
+  margin: 20px 0
+  max-width: 100%
 
 hr
   border: 0
   height: 2px
   background-color: $faint-border-color
-
-ol, ul
-  list-style-position: outside
-  margin: 5px 0 5px 20px
-  padding: 0
-  li
-    margin: 8px 0 8px 16px
-
-ul
-  margin-left: 10px
 
 pre
   +code-font-stack
@@ -85,30 +83,6 @@ pre
   +mobile-landscape-and-below
     max-width: 100%
 
-a
-  color: $link-color
-  &.iconic
-    +iconic(20px)
-
-iframe
-  margin: 20px 0
-  max-width: 100%
-
-form.standard
-  max-width: $content-max-width
-  .input
-    margin: 20px 0
-    .label-and-hint
-      display: block
-      .hint
-        opacity: 0.5
-        padding: 0 5px
-
-    input, textarea
-      width: 100%
-      +base-font-stack
-      +desktop-typography
-
 blockquote
   border-left: 5px solid $faint-border-color
   margin: 15px 0
@@ -119,6 +93,9 @@ dd
   margin: 0
   +tablet-landscape-and-below
     padding: 5px 15px
+
+// Tables
+// ----------------------------------------------------------------------
 
 table
   font-size: 15px
@@ -137,6 +114,40 @@ table
       &.iconic
         line-height: 22px
 
+// Common Layout Elements
+// ----------------------------------------------------------------------
+
+.content
+  // margin-top: 20px
+  padding: 15px
+  +flexible-centered-container($content-max-width)
+
+// Utility Classes
+// ----------------------------------------------------------------------
+
+.button-large
+  +button-large
+
+.button
+  +button
+
+.hidden
+  display: none
+
+.weak, .faint
+  transition: all 0.3s
+  +faint
+  &:hover
+    opacity: 1
+
+.notice
+  background-color: $notice-background-color
+  border: 1px solid $notice-border-color
+  color: $notice-text-color
+  padding: 10px
+  margin: 10px 0
+  font-size: 14px
+
 .call-to-action
   background-color: $call-to-action-background-color
   border: 1px solid $call-to-action-border-color
@@ -145,14 +156,42 @@ table
   margin: 10px 0
   +border-radius(3px)
 
-.hidden
-  display: none
-.weak, .faint
-  transition: all 0.3s
-  +faint
-  &:hover
-    opacity: 1
+// Forms
+// ----------------------------------------------------------------------
 
+form
+
+  &.standard
+    max-width: $content-max-width
+    .input
+      margin: 20px 0
+      .label-and-hint
+        display: block
+        .hint
+          opacity: 0.5
+          padding: 0 5px
+
+    input, textarea
+      width: 100%
+      +base-font-stack
+      +desktop-typography
+
+// Lists
+// ----------------------------------------------------------------------
+
+ol, ul
+  +reset-list
+
+// Old-school list; the kind you want mid-prose.
+ol.bulleted, ul.bulleted
+  list-style-position: outside
+  list-style-type: disc
+  margin: 5px 0 5px 10px
+  padding: 0
+  li
+    margin: 8px 0 8px 8px
+
+// For menus, with pipe separators between items
 ol.horizontal, ul.horizontal
   +reset-list
   > li
@@ -168,9 +207,17 @@ ol.horizontal, ul.horizontal
 ol.pipeless, ul.pipeless
   > li
     border: none
+    background: none
 
 ol.ruled, ul.ruled
   +reset-list
   > li
-    padding: 10px 0
+    padding: 15px 0
     +horizontal-line(bottom, 5%, rgba($text-color, 0.2), transparent)
+    &:first-child
+      padding-top: 0
+    &:last-child
+      padding-bottom: 0
+      background: none
+
+
