@@ -1,6 +1,9 @@
 $search-button-width: 100px
 $search-button-margin-left: 20px
 
+aside.sidebar
+  display: none
+
 form.search
   +no-float
   position: relative
@@ -32,6 +35,20 @@ form.search
 h2
   font-weight: normal
 
+ul.boxes
+  +no-float
+  > li
+    +float-left
+    width: 50%
+    &:first-child
+      padding-right: 20px
+    &:last-child
+      padding-left: 20px
+    +tablet-landscape-and-below
+      &:first-child, &:last-child
+        padding: 0
+      width: 100%
+
 ul.conversation
   +reset-list
   > li
@@ -43,14 +60,39 @@ ul.conversation
     aside
       +float-left
       width: 25%
-      img.avatar
+      .avatar
+        width: 70px
+        height: 70px
         +border-radius(4px)
-      p
-        padding: 0
-        &.name
-          color: $foreground-color
-        &.metadata
-          +faint
+      ul.meta
+        > li
+          padding: 0
+          &.name
+            color: $foreground-color
+          &.timestamp
+            +faint
     article
       +float-right
       width: 75%
+
+    +tablet-landscape-and-below
+      aside
+        +no-float
+        width: 100%
+        margin-bottom: 10px
+        .avatar
+          +float-left
+          width: 40px
+          height: 40px
+          margin-right: 10px
+        .meta
+          +float-left
+          margin-top: 10px
+          max-width: 260px
+          > li
+            +float-left
+            margin-right: 10px
+
+      article
+        +no-float
+        width: 100%

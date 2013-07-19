@@ -29,7 +29,7 @@ Add a class of `enso` to your layout body, as all of enso's styles are namespace
 
 ## Development
 
-Follow these steps to make developing against the gem painless:
+Follow these steps to make developing against the gem <strike>painless</strike> less painful:
 
 ```bash
 # Symlink your checked-out copy of the enso repo:
@@ -40,6 +40,9 @@ gem "enso", path: "~/.heroku/enso"
 
 # To make enso's stylesheets feel like they're in your app:
 ln -s ~/.heroku/enso app/assets/stylesheets
+
+# Trick your stupid Rails app into recompiling
+while true; do echo >> application.css.sass; sleep 1; done
 ```
 
 ## Cutting a Release
