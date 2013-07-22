@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    enso (0.0.2)
+    ensou (0.0.2)
       sass
 
 GEM
@@ -14,5 +14,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  enso!
+  ensou!
   rake

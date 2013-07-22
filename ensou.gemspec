@@ -4,9 +4,9 @@ Gem::Specification.new do |gem|
   gem.email         = ["zeke@heroku.com"]
   gem.description   = %q{Styles for Heroku apps}
   gem.summary       = %q{Styles for Heroku apps}
-  gem.homepage      = "https://github.com/heroku/enso"
+  gem.homepage      = "https://github.com/heroku/ensou"
   gem.files         = `git ls-files`.split($\)
-  gem.name          = "enso"
+  gem.name          = "ensou"
   gem.require_paths = ["lib"]
   gem.version       = "0.0.4"
   gem.add_development_dependency 'rake'
