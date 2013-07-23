@@ -10,14 +10,15 @@ Enso is avialable as a [rubygem](http://rubygems.org/gems/ensou), so using it in
 Put this in your Gemfile and bundle:
 
 ```ruby
-gem "ensou", "~> 0.0.1"
-```
+gem "ensou", "~> 0.0.5"
+``
 
-Import one of ensou's themed stylesheets into your app's sass/scss stylesheet:
+Import an ensou's sandwich into your app's s*ss stylesheet:
 
 ```sass
-@import "ensou/day"
-@import "ensou/night"
+@import "themes/night"
+@import "partials/base"
+@import "properties/help"
 ```
 
 ## Development
@@ -31,16 +32,14 @@ ln -s ~/my/checked-out/ensou/ ~/.heroku/ensou
 # In your app, point to your local copy of the ensou gem:
 gem "ensou", path: "~/.heroku/ensou"
 
-<<<<<<< Updated upstream
-# To make enso's stylesheets feel like they're in your app:
-ln -s ~/.heroku/enso app/assets/stylesheets
+# To make ensou's stylesheets feel like they're in your app:
+ln -s ~/.heroku/ensou app/assets/stylesheets
 
 # Trick your stupid Rails app into recompiling
 while true; do echo >> application.css.sass; sleep 1; done
-=======
+
 # To make ensou's stylesheets feel like they're in your app:
 ln -s ~/.heroku/ensou app/assets/stylesheets
->>>>>>> Stashed changes
 ```
 
 ## Cutting a Release
