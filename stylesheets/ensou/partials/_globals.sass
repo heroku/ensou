@@ -118,7 +118,7 @@ table
 // ----------------------------------------------------------------------
 
 .content
-  // margin-top: 20px
+  margin-top: 100px // make some room for async-rendered fuji
   padding: 15px
   +flexible-centered-container($content-max-width)
 
@@ -193,16 +193,8 @@ ol.bulleted, ul.bulleted
 
 // For menus, with pipe separators between items
 ol.horizontal, ul.horizontal
+  +horizontal-list
   +reset-list
-  > li
-    display: inline-block
-    +vertical-line(left, 30%, rgba($text-color, 0.2), transparent)
-    padding: 2px 10px
-    &:first-child
-      background: none
-      padding-left: 0
-    &:last-child
-      padding-right: 0
 
 ol.pipeless, ul.pipeless
   > li
