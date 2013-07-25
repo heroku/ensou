@@ -91,11 +91,12 @@ $yellow:  #ffa500
 $red:     #ff0015
 
 #statusBox
-  // background: rgba(black, 0.1)
   padding: 10px 0 10px 5px
+  height: 40px // fixed, so ajax-loaded content doesn't make page content glitch
 
   ul.statuses
     +horizontal-list
+    +pipeless
     > li
       padding-left: 22px !important
       padding-bottom: 10px
