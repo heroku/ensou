@@ -13,6 +13,33 @@
   min-width: 320px
   max-width: $width
 
+@mixin grid($columns: 3, $spacing: 10px)
+  display: -webkit-box
+  display: -moz-box
+  display: -webkit-flexbox
+  > li
+    // border: 1px solid yellow <-- poorman's gridlines
+    -webkit-box-flex: 1
+    -moz-box-flex: 1
+    -webkit-flex: 1
+    max-width: ($content-max-width/$columns)
+    margin-right: $spacing
+    &:last-child
+      margin-right: 0
+      // relative max-widths and flexbox don't mix (in firefox), hence..
+      max-width: ($content-max-width/$columns)-$spacing
+  +tablet-landscape-and-below
+    display: block
+    > li
+      -webkit-box-flex: none
+      -moz-box-flex: none
+      -webkit-flex: none
+      width: 100%
+      max-width: none
+      &:last-child
+        width: 100%
+        max-width: none
+
 @mixin centered_left($margin:0px)
   position: absolute
   top: 50%
