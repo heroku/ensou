@@ -1,10 +1,6 @@
-![ensou](https://s3.amazonaws.com/f.cl.ly/items/1O3N0i2E3c2S3z3r183V/enso-purple-01.svg)
+![http://cl.ly/image/1E2M0d3y1h2K](http://cl.ly/image/1E2M0d3y1h2K/content#.png)
 
-# Ensou
-
-Ensou provides a set of sass styles for use in Heroku apps.
-
-Ensou is:
+Ensou provides a set of sass styles for use in Heroku apps. It is:
 
 - **Language Agnostic** Ruby, Node, [brainfuck](http://esolangs.org/wiki/brainfuck).
 - **Dependency Free** Compass not required.
