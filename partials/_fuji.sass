@@ -110,6 +110,38 @@ $fuji-line-size: 40%
       height: 100%
       +border-radius(50%)
 
+  .fuji-avatar-modal
+    +reset-list
+    z-index: 365
+    position: absolute
+    top: 69px
+    right: -32px
+    width: 170px
+    background: white
+    +border-radius(2px)
+    box-shadow: 0 2px 2px 3px rgba(black,0.3)
+    transition: all 0.3s
+    pointer-events: none
+    opacity: 0
+    &.active
+      opacity: 1
+      pointer-events: auto
+    > li
+      display: block
+      padding: 0
+      +horizontal-line(bottom, 5%, rgba($text-color, 0.2), transparent)
+      &:last-child
+        background: none
+      a
+        display: block
+        padding: 10px 5px
+        color: $text-color
+        font-size: 0.9em
+        text-decoration: none
+        &:hover
+          color: black
+          text-decoration: none
+
   .fuji-links
     position: absolute
     top: 26px
