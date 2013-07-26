@@ -92,7 +92,12 @@ $red:     #ff0015
 
 #statusBox
   padding: 10px 0 10px 5px
-  height: 40px // fixed, so ajax-loaded content doesn't make page content glitch
+  min-height: 40px // fixed, so ajax-loaded content doesn't make page content glitch
+  // background: black
+  font-size: 0.9em
+
+  ul.issues
+    display: none
 
   ul.statuses
     +horizontal-list
@@ -103,7 +108,6 @@ $red:     #ff0015
       margin-right: 20px
       position: relative
       line-height: 1
-      font-size: 0.9em
       color: $text-color
 
       &:before
