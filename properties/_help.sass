@@ -170,10 +170,22 @@ form.edit_ticket
     top: 33px
 
 // "Chosen" hacks
-div.field label
-  display: block
-  float: none
-  clear: both
+div.field
+  label
+    display: block
+    float: none
+    clear: both
+  .radios
+    label
+      display: inline
+
+textarea
+  +base-font-stack
+  color: $text-color
+  background-color: rgba(36, 35, 45, 1)
+  border: none
+  padding: 5px
+  font-size: 16px
 
 #ticket_application_chzn
   float: left
