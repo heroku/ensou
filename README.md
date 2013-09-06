@@ -11,11 +11,22 @@ Ensou provides a set of sass styles for use in Heroku apps.
 ## How to Use It
 
 ```
-cd my-rails-app
+cd my-app
 git submodule add git@github.com:heroku/ensou.git app/assets/stylesheets/ensou
 ```
 
 ```sass
 // application.s*ss
 @import "ensou/blog"
+```
+
+## Git Submodule Gotcha
+
+If you clone an existing app that already has ensou set up as a git submodule,
+you may see that the `ensou` directory contains no files. If so, make sure you're
+using a newish (1.8+) version of git, then run this command:
+
+```
+cd my-app
+git submodule init && git submodule update
 ```
