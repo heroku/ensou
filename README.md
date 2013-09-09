@@ -22,7 +22,7 @@ git submodule add git@github.com:heroku/ensou.git app/assets/stylesheets/ensou
 
 ## Git Submodule Gotcha
 
-If you clone an existing app that already has ensou set up as a git submodule,
+Git submodules are [kind of lame](http://git-scm.com/book/en/Git-Tools-Submodules#Cloning-a-Project-with-Submodules). If you clone an existing app that already has ensou set up as a git submodule,
 you may see that the `ensou` directory contains no files. If so, make sure you're
 using a newish (1.8+) version of git, then run this command:
 
