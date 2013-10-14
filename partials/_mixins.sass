@@ -108,6 +108,16 @@
     &:last-child
       padding-right: 0
 
+// Old-school list; the kind you want amid prose.
+@mixin bulleted-list
+  +reset-list
+  list-style-position: outside
+  list-style-type: disc
+  margin: 5px 0 5px 10px
+  padding: 0
+  > li
+    margin: 8px 0 8px 8px
+
 @mixin pipeless
   > li
     border: none
